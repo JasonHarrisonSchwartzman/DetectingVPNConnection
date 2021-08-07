@@ -99,7 +99,7 @@ def print_callback(pkt):
                     # Determine if client is using a VPN or Direct
                     #
 
-                    ### CHANGE IF STATEMENT TO THRESHOLD THAT WE COME UP WITH ###
+                    ### CHANGE IF STATEMENT TO THRESHOLD THAT WE DETERMINE (CHANGE 0.01) ###
                     if captured_syn_packet[pkt.ip.src]['Client RTT'].total_seconds() - captured_syn_packet[pkt.ip.src]['Probe RTT'].total_seconds() < 0.01: 
                         captured_syn_packet[pkt.ip.src]['V or D'] = "DIRECT"
                     else:
