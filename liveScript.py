@@ -37,14 +37,9 @@ worksheet.write(0, 3, 'VPN or Direct')
 
 def print_callback(pkt):
     global workbook_index
-    #check if the pkt's ip address is new
-    #store the current ip address and time stamp for calulating VPN rtt
-        #find next corresponding inbound time stamp
-    #initiate SSH ping
-    #store the outbound SSH ping time stamp
-        #find next corresponding inbound time stamp
 
     try:
+        ### Pyshark API
         # pkt.ip.src
         # pkt.ip.dst
         # pkt.tcp.seq
